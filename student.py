@@ -54,8 +54,10 @@ class Piggy(PiggyParent):
     '''
 
     def dance(self):
+      """Begin Dancing; Nothing Happens Yet"""  
+      
       #HIGHER ORDERED
-      for x in range(2):
+      for x in range(3):
           self.shake()
           self.spin()
           self.stopgo()
@@ -88,7 +90,7 @@ class Piggy(PiggyParent):
     def reversespin(self):
         """Do a cool spin dance backwards"""
         pass
-"""Nothing happens yet"""
+
 
 
 
