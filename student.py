@@ -87,10 +87,10 @@ class Piggy(PiggyParent):
         """Stop and go"""
         while True:
             self.fwd()
-            self.sleep(1)
+            time.sleep(1)
             self.stop()
             self.fwd()
-            self.sleep(1)
+            time.sleep(1)
             self.stop()
 
     def reversespin(self):
