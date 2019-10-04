@@ -80,22 +80,22 @@ class PiggyParent(gopigo3.GoPiGo3):
         self.set_motor_position(self.MOTOR_LEFT + self.MOTOR_RIGHT, deg)
 
     def turn_by_degree(self, deg):
-       #higher-ordered (more complex but easier to read)
+        #higher-ordered (more complex but easier to read)
 
-       #get our current location
+        #get our current location
         current = self.get_heading()
 
-       #calculate delta
-       goal = current + deg
-       #loop around 360 marker
-       if goal > 360:
-           goal -= 360
-        elif goal < 0
+        #calculate delta
+        goal = current + deg
+        #loop around 360 marker
+        if goal > 360:
+            goal -= 360
+        elif goal < 0:
             goal += 360
 
-       #call turn to degree on the delta
-       self.turn_to_degree(goal)
-       
+        #call turn to degree on the delta
+        self.turn_to_degree(goal)
+
     
 
     def turn_to_degree(self, deg):
@@ -104,7 +104,7 @@ class PiggyParent(gopigo3.GoPiGo3):
         #EXTRA CREDIT: TURN LEFT IF MORE EFFICENT
 
         #while loop- keep turning until gyro says im there
-        while abs(degree -self.get_heading()) > 5:
+        while abs(deg -self.get_heading()) > 5:
             self.right(primary=60, counter=-60)
         self.stop()
         print("I think I've turned correctly")
