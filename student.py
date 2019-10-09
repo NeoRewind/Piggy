@@ -87,11 +87,11 @@ class Piggy(PiggyParent):
         """Stop and go"""
         while True:
             self.fwd()
-            time.sleep(.5)
+            time.sleep(.25)
             self.stop()
             time.sleep(.5)
             self.fwd()
-            time.sleep(.5)
+            time.sleep(.25)
             self.stop()
             time.sleep(.5)
 
