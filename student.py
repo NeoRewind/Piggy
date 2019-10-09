@@ -89,9 +89,11 @@ class Piggy(PiggyParent):
             self.fwd()
             time.sleep(1)
             self.stop()
+            time.sleep(1)
             self.fwd()
             time.sleep(1)
             self.stop()
+            time.sleep(1)
 
     def reversespin(self):
         """Do a cool spin dance backwards"""
