@@ -79,6 +79,12 @@ class Piggy(PiggyParent):
 
     def shake(self):
         """Turn both wheels and turn servo"""
+        while True:
+            self.right(primary=90, counter=0)
+            time.sleep(.5)
+            self.stop
+            time.sleep(.5)
+            self.left(primary=90, counter=0)
         pass
     def spin(self):
         """Do a cool spin dance move"""
