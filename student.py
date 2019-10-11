@@ -91,23 +91,22 @@ class Piggy(PiggyParent):
         pass
     def stopgo(self):
         """Stop and go"""
-        while True:
-            self.fwd()
-            time.sleep(.25)
-            self.stop()
-            time.sleep(.5)
-            self.fwd()
-            time.sleep(.25)
-            self.stop()
-            time.sleep(.5)
-            self.fwd()
-            time.sleep(.25)
-            self.stop()
-            time.sleep(.5)
-            self.fwd()
-            time.sleep(.25)
-            self.stop()
-            time.sleep(.5)
+        self.fwd()
+        time.sleep(.25)
+        self.stop()
+        time.sleep(.5)
+        self.fwd()
+        time.sleep(.25)
+        self.stop()
+        time.sleep(.5)
+        self.fwd()
+        time.sleep(.25)
+        self.stop()
+        time.sleep(.5)
+        self.fwd()
+        time.sleep(.25)
+        self.stop()
+        time.sleep(.5)
 
     def reversespin(self):
         """Do a cool spin dance backwards"""
