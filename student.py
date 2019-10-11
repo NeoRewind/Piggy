@@ -18,7 +18,7 @@ class Piggy(PiggyParent):
         '''
         self.LEFT_DEFAULT = 80
         self.RIGHT_DEFAULT = 80
-        self.MIDPOINT = 1500  # what servo command (1000-2000) is straight forward for your bot?
+        self.MIDPOINT = 1700  # what servo command (1000-2000) is straight forward for your bot?
         self.load_defaults()
         
 
@@ -82,6 +82,8 @@ class Piggy(PiggyParent):
         """Turn both wheels and turn servo"""
         while True:
             self.right(primary=90, counter=0)
+            self.servo(2200)
+            self.servo(1100)
             time.sleep(5)
             self.stop()
             time.sleep(1)
