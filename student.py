@@ -82,16 +82,34 @@ class Piggy(PiggyParent):
         """Turn both wheels and turn servo"""
         while True:
             self.right(primary=90, counter=0)
-            self.servo(2200)
+            self.servo(1900)
+            self.servo(1100)
+            self.servo(1900)
+            self.servo(1100)
+            self.servo(1900)
+            self.servo(1100)
+            self.servo(1900)
+            self.servo(1100)
+            self.servo(1900)
             self.servo(1100)
             time.sleep(5)
             self.stop()
             time.sleep(1)
             self.left(primary=90, counter=0)
+            self.servo(1900)
+            self.servo(1100)
+            self.servo(1900)
+            self.servo(1100)
+            self.servo(1900)
+            self.servo(1100)
+            self.servo(1900)
+            self.servo(1100)
+            self.servo(1900)
+            self.servo(1100)
             time.sleep(5)
             self.stop()
             time.sleep(1)
-            #self.right(primary=90, counter=0)
+            
 
         
 
