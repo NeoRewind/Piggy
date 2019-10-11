@@ -61,6 +61,7 @@ class Piggy(PiggyParent):
          self.spin()
          self.reversespin()"""
         self.stopgo()
+        self.shake()
         
     def scan(self):
         """Sweep the servo and populate the scan_data dictionary"""
