@@ -89,6 +89,7 @@ class Piggy(PiggyParent):
             self.sleep(5)
             self.stop()
             self.sleep(1)
+            self.right(primary=90, counter=0)
 
         
 
