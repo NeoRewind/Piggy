@@ -86,7 +86,7 @@ class Piggy(PiggyParent):
             self.stop
             time.sleep(5)
             self.left(primary=90, counter=0)
-        pass
+    
     def spin(self):
         """Do a cool spin dance move"""
         pass
