@@ -83,10 +83,13 @@ class Piggy(PiggyParent):
         while True:
             self.right(primary=90, counter=0)
             time.sleep(5)
-            self.stop
-            time.sleep(5)
+            self.stop()
+            time.sleep(1)
             self.left(primary=90, counter=0)
-            self.stop
+            self.sleep(5)
+
+        
+
     
     def spin(self):
         """Do a cool spin dance move"""
