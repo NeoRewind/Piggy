@@ -57,11 +57,11 @@ class Piggy(PiggyParent):
     def dance(self):
         """Begin Dancing; Nothing Happens Yet"""  
         for x in range(3):
+        self.stopgoback()
          self.spin()
          self.stopgo()
          self.shake()
-         """
-         self.reversespin()"""
+         self.stopgoback()
         
     def scan(self):
         """Sweep the servo and populate the scan_data dictionary"""
@@ -152,9 +152,38 @@ class Piggy(PiggyParent):
         self.stop()
         time.sleep(.5)
 
-    def reversespin(self):
-        """Do a cool spin dance backwards"""
-        pass
+    def stopgoback(self):
+        """stop and go backwards w/spin"""
+        self.back()
+        self.servo(1100)
+        time.sleep(.25)
+        self.stop()
+        time.sleep(.5)
+        self.back()
+        self.servo(1900)
+        time.sleep(.25)
+        self.stop()
+        time.sleep(.5)
+        self.back()
+        self.servo(1100)
+        time.sleep(.25)
+        self.stop()
+        time.sleep(.5)
+        self.back()
+        self.servo(1900)
+        time.sleep(.25)
+        self.stop()
+        time.sleep(.5)
+        self.back()
+        self.servo(1100)
+        time.sleep(.25)
+        self.stop()
+        time.sleep(.5)
+        self.back()
+        self.servo(1900)
+        time.sleep(.25)
+        self.stop()
+        time.sleep(.5)
 
 
 
