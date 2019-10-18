@@ -169,6 +169,8 @@ class Piggy(PiggyParent):
         time.sleep(.25)
         self.stop()
         time.sleep(.5)
+        self.turn_by_degree(180)
+        time.sleep(.25)
         self.back()
         self.servo(1900)
         time.sleep(.25)
@@ -184,6 +186,8 @@ class Piggy(PiggyParent):
         time.sleep(.25)
         self.stop()
         time.sleep(.5)
+        self.turn_by_degree(180)
+        time.sleep(.25)
 
 
 
