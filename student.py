@@ -55,13 +55,13 @@ class Piggy(PiggyParent):
     '''
 
     def dance(self):
-        """Begin Dancing; Nothing Happens Yet"""  
+        """Begin Dancing I Hope It Works"""  
         for x in range(3):
          self.stopgoback()
          self.spin()
          self.stopgo()
          self.shake()
-         self.stopgoback()
+         
         
     def scan(self):
         """Sweep the servo and populate the scan_data dictionary"""
