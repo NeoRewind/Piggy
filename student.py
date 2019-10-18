@@ -58,10 +58,10 @@ class Piggy(PiggyParent):
         """Begin Dancing; Nothing Happens Yet"""  
         for x in range(3):
         """ self.shake()
-         self.spin()
-         self.reversespin()"""
-         self.stopgo()
-         self.shake()
+            self.spin()
+            self.reversespin()"""
+            self.stopgo()
+            self.shake()
         
     def scan(self):
         """Sweep the servo and populate the scan_data dictionary"""
