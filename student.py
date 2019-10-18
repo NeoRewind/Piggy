@@ -99,17 +99,17 @@ class Piggy(PiggyParent):
     def spin(self):
         """Spin and move forward then backward"""
         self.turn_by_degree(180)
-        time.sleep(1)
+        time.sleep(.25)
         self.stop
-        time.sleep(1)
+        time.sleep(.25)
         self.fwd()
         time.sleep(2)
         self.stop
         time.sleep(.25)
         self.turn_by_degree(180)
-        time.sleep(1)
+        time.sleep(.25)
         self.stop
-        time.sleep(1)
+        time.sleep(.25)
         self.fwd()
         time.sleep(2)
         self.stop
