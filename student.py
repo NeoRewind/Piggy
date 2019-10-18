@@ -57,10 +57,10 @@ class Piggy(PiggyParent):
     def dance(self):
         """Begin Dancing; Nothing Happens Yet"""  
         for x in range(3):
+         self.spin()
          self.stopgo()
          self.shake()
-         """self.shake()
-         self.spin()
+         """
          self.reversespin()"""
         
     def scan(self):
@@ -79,7 +79,7 @@ class Piggy(PiggyParent):
         print("Wait a second. \nI can't navigate the maze at all. Please give my programmer a zero.")
 
     def shake(self):
-        """Turn both wheels and turn servo"""
+        """Do a cool spin and turn servo"""
         #Need to Fix Servo
         self.right(primary=90, counter=0)
         self.servo(1900)
@@ -97,8 +97,26 @@ class Piggy(PiggyParent):
 
     
     def spin(self):
-        """Do a cool spin dance move"""
-        pass
+        """Spin and move forward then backward"""
+        self.turn_by_degree(180)
+        time.sleep(1)
+        self.stop
+        time.sleep(1)
+        self.fwd()
+        time.sleep(2)
+        self.stop
+        time.sleep(.25)
+        self.turn_by_degree(180)
+        time.sleep(1)
+        self.stop
+        time.sleep(1)
+        self.fwd()
+        time.sleep(2)
+        self.stop
+        time.sleep(.25)
+
+
+        
     def stopgo(self):
         #Fix wheel stength
         """Stop and go"""
