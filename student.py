@@ -57,10 +57,10 @@ class Piggy(PiggyParent):
     def dance(self):
         """Begin Dancing I Hope It Works"""  
         for x in range(3):
-         #self.stopgoback()
+         self.stopgoback()
          self.spin()
-         #self.stopgo()
-         #self.shake()
+         self.stopgo()
+         self.shake()
          
         
     def scan(self):
