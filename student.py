@@ -101,6 +101,7 @@ class Piggy(PiggyParent):
         #Need to Fix Servo
         self.right(primary=90, counter=0)
         self.servo(2000)
+        time.sleep(.25)
         self.servo(1000)
         time.sleep(5)
         self.stop()
