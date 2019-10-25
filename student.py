@@ -101,30 +101,30 @@ class Piggy(PiggyParent):
         #Need to Fix Servo
         self.right(primary=90, counter=0)
         self.servo(2000)
-        time.sleep(.25)
+        time.sleep(1)
         self.servo(1000)
-        time.sleep(.25)
+        time.sleep(1)
         self.servo(2000)
-        time.sleep(.25)
+        time.sleep(1)
         self.servo(1000)
-        time.sleep(.25)
+        time.sleep(1)
         self.servo(2000)
         time.sleep(5)
         self.stop()
         time.sleep(.1)
         self.left(primary=90, counter=0)
         self.servo(2000)
-        time.sleep(.25)
+        time.sleep(1)
         self.servo(1000)
-        time.sleep(.25)
+        time.sleep(1)
         self.servo(2000)
-        time.sleep(.25)
+        time.sleep(1)
         self.servo(1000)
-        time.sleep(.25)
+        time.sleep(1)
         self.servo(2000)
         time.sleep(5)
         self.stop()
-        time.sleep(1)
+        time.sleep(.25)
             
 
         
@@ -137,7 +137,7 @@ class Piggy(PiggyParent):
         self.stop
         time.sleep(.25)
         self.fwd()
-        time.sleep(1)
+        time.sleep(.5)
         self.stop
         time.sleep(.25)
         self.turn_by_deg(180)
@@ -145,7 +145,7 @@ class Piggy(PiggyParent):
         self.stop
         time.sleep(.25)
         self.fwd()
-        time.sleep(1)
+        time.sleep(.5)
         self.stop
         time.sleep(.25)
         self.turn_by_deg(180)
