@@ -101,7 +101,7 @@ class Piggy(PiggyParent):
                 print ("/n FOUND SOMETHING /n")
             elif self.read_distance() > trigger_distance and found_something:
                 found_something = False
-                print("I havce a clear view. Restting my counter")
+                print("I have a clear view. Resetting my counter")
         self.stop()
         print("I have found this many things: %d" % count)
         return count
@@ -117,7 +117,7 @@ class Piggy(PiggyParent):
             self.fwd()
             time.sleep(.01)
         self.stop()
-        
+
  
     def shake(self):
         """Do a cool spin and turn servo"""
