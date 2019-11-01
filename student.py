@@ -117,9 +117,10 @@ class Piggy(PiggyParent):
         while True: 
             print("/n IM NAVIGATING /n")
             while self.read_distance() > 250:
-                self.fwd()
+             self.fwd()
              time.sleep(.01)
-         self.turn_by_deg(50)
+        self.turn_by_deg(50)
+        
 
  
     def shake(self):
