@@ -119,6 +119,19 @@ class Piggy(PiggyParent):
                 self.fwd()
                 time.sleep(.01)
             self.turn_by_deg(50)
+
+    def check_distance(self):
+        self.servo(1000)
+        time.sleep(.01)
+        l = self.read_distance
+        self.servo(2000)
+        time.sleep(.01)
+        r = self.read_distance
+        if l > r:
+            self.turn_by_deg(-90)
+        elif r > l:
+            self.turn_by_deg(90)
+
         
 
  
