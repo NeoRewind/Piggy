@@ -118,7 +118,6 @@ class Piggy(PiggyParent):
             while self.read_distance() > 250:
                 self.fwd()
                 time.sleep(.01)
-            self.stop()
             # self.check_distance() # turn using check_dist
             self.average_distance() # turn using average_dist
             
