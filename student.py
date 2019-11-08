@@ -115,24 +115,24 @@ class Piggy(PiggyParent):
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         print("Wait a second. \nI can't navigate the maze at all. Please give my programmer a zero.")
         while True: 
-            self.servo(self.MIDPOINT)
-            while self.read_distance() > 250:
+            self.servo(self.MIDPOINT) #Set servo straight
+            while self.read_distance() > 250: # When the distance is more tham 250...
                 self.fwd()
-                time.sleep(.01)
+                time.sleep(.01) #Move and check distance every .01 seconds
             self.stop()
             # self.check_distance() # turn using check_dist
             self.average_distance() # turn using average_dist
             
 
 
-    def average_distance(self):
-        self.scan()
+    def average_distance(self): #Check distance
+        self.scan() 
         #traversal
         left_total = 0
         left_count = 0
         right_total = 0
         right_count = 0
-        for ang, dist in self.scan_data.items():
+        for ang, dist in self.scan_data.items(): #Set _total and _right values
             if ang < self.MIDPOINT:
                 right_total += dist
                 right_count += 1
@@ -142,13 +142,13 @@ class Piggy(PiggyParent):
 
         left_avg = left_total / left_count
         right_avg = right_total / right_count
-        if left_avg > right_avg:
+        if left_avg > right_avg: #Move by 45 deg wherever average is less
             self.turn_by_deg(-45)
         else:
             self.turn_by_deg(45)
 
 
-    def check_distance(self):
+    def check_distance(self): # Additional distance method
         self.servo(1000)
         time.sleep(.01)
         l = self.read_distance()
