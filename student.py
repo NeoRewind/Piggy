@@ -116,7 +116,7 @@ class Piggy(PiggyParent):
         print("Wait a second. \nI can't navigate the maze at all. Please give my programmer a zero.")
         while True: 
             self.servo(self.MIDPOINT) #Set servo straight
-            while self.read_distance() > 250: # When the distance is more tham 250...
+            while self.read_distance() > 150: # When the distance is more tham 250...
                 self.fwd()
                 time.sleep(.01) #Move and check distance every .01 seconds
             self.stop()
