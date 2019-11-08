@@ -155,7 +155,7 @@ class Piggy(PiggyParent):
             self.turn_by_deg(45)
 
     def get_out_of_corner(self): # Method to escape corner
-        if corner_count > 5:
+        if self.corner_count > 5:
             self.turn_by_deg(180)
 
 
