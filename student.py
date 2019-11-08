@@ -16,7 +16,7 @@ class Piggy(PiggyParent):
         ''' 
         MAGIC NUMBERS <-- where we hard-code our settings
         '''
-        self.LEFT_DEFAULT = 80
+        self.LEFT_DEFAULT = 70
         self.RIGHT_DEFAULT = 80
         self.MIDPOINT = 1500  # what servo command (1000-2000) is straight forward for your bot?
         self.load_defaults()
@@ -116,7 +116,7 @@ class Piggy(PiggyParent):
         print("Wait a second. \nI can't navigate the maze at all. Please give my programmer a zero.")
         while True: 
             self.servo(self.MIDPOINT) #Set servo straight
-            while self.read_distance() > 150: # When the distance is more tham 250...
+            while self.read_distance() > 150: # When the distance is more tham # ...
                 self.fwd()
                 time.sleep(.01) #Move and check distance every .01 seconds
             self.stop()
