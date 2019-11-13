@@ -165,9 +165,9 @@ class Piggy(PiggyParent):
     def get_out_of_corner(self): # Method to escape corner
         if self.corner_count > 3:
             self.turn_by_deg(180)
-            self.fwd()
-            time.sleep(1)
-            self.start_direction()
+            #self.fwd()
+            #time.sleep(1)
+            #self.start_direction()
 
 
     def check_distance(self): # Additional distance method
