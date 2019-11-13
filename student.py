@@ -114,7 +114,7 @@ class Piggy(PiggyParent):
         #Three checks
         for ang in range(self.MIDPOINT-150,self.MIDPOINT+151,150):
             self.servo(ang)
-            if self.read_distance < self.SAFE_Distance:
+            if self.read_distance() < self.SAFE_Distance:
                 return False
         #Have servo scan while moving
         return True
