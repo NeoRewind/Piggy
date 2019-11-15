@@ -158,9 +158,9 @@ class Piggy(PiggyParent):
         left_avg = left_total / left_count
         right_avg = right_total / right_count
         if left_avg > right_avg: #Move by 45 deg wherever average is less
-            self.turn_by_deg(-45)
+            self.turn_by_deg(-55)
         else:
-            self.turn_by_deg(45)
+            self.turn_by_deg(55)
 
     def get_out_of_corner(self): # Method to escape corner
         if self.corner_count > 3:
