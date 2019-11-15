@@ -112,7 +112,7 @@ class Piggy(PiggyParent):
          
     def quick_check(self):
         #Three checks
-        for ang in range(self.MIDPOINT-150,self.MIDPOINT+151,150):
+        for ang in range(self.MIDPOINT-450,self.MIDPOINT+451,150):
             self.servo(ang)
             if self.read_distance() < self.SAFE_Distance:
                 return False
