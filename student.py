@@ -21,7 +21,7 @@ class Piggy(PiggyParent):
         self.MIDPOINT = 1500  # what servo command (1000-2000) is straight forward for your bot?
         self.corner_count = 0
         self.load_defaults()
-        self.SAFE_Distance = 150
+        self.SAFE_Distance = 200
         
         
 
