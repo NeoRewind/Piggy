@@ -142,6 +142,7 @@ class Piggy(PiggyParent):
         self.corner_count += 1
         if self.corner_count > 3:
             self.get_out_of_corner()
+            return
         #traversal
         left_total = 0
         left_count = 0
@@ -183,9 +184,7 @@ class Piggy(PiggyParent):
         elif r > l:
             self.turn_by_deg(45)
 
-        
 
- 
     def shake(self):
         """Do a cool spin and turn servo"""
         #Need to Fix Servo
@@ -217,9 +216,6 @@ class Piggy(PiggyParent):
         time.sleep(.25)
             
 
-        
-
-    
     def spin(self):
         """Spin 180 and move forward"""
         self.turn_by_deg(180)
