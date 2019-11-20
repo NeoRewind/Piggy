@@ -31,7 +31,7 @@ class Piggy(PiggyParent):
         self.set_motor_limits(self.MOTOR_RIGHT, self.RIGHT_DEFAULT)
         self.set_servo(self.SERVO_1, self.MIDPOINT)
         
-
+          
     def menu(self):
         """Displays menu dictionary, takes key-input and calls method"""
         ## This is a DICTIONARY, it's a list with custom index values. Python is cool.
@@ -131,7 +131,6 @@ class Piggy(PiggyParent):
             while self.quick_check(): # When the distance is more tham # ...
                 self.fwd()
                 time.sleep(.01) #Move and check distance every .01 seconds
-                self.corner_count = 0
             self.stop()
             # self.check_distance() # turn using check_dist
             self.average_distance() # turn using average_dist
