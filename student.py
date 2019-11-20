@@ -129,6 +129,7 @@ class Piggy(PiggyParent):
         while True: 
             self.servo(self.MIDPOINT) #Set servo straight
             while self.quick_check(): # When the distance is more tham # ...
+                corner_count = 0
                 self.fwd()
                 time.sleep(.01) #Move and check distance every .01 seconds
             self.stop()
@@ -140,7 +141,8 @@ class Piggy(PiggyParent):
     def average_distance(self): #Check distance
         self.scan()
         self.corner_count += 1
-        self.get_out_of_corner()
+        if corner_count > 3:
+            self.get_out_of_corner()
         #traversal
         left_total = 0
         left_count = 0
@@ -162,8 +164,7 @@ class Piggy(PiggyParent):
             self.turn_by_deg(55)
 
     def get_out_of_corner(self): # Method to escape corner
-        if self.corner_count > 3:
-            self.turn_by_deg(180)
+        self.turn_by_deg(180)
             #Attempt to try to make robot face direction its stared
             #self.fwd()
             #time.sleep(1)
