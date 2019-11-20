@@ -125,7 +125,7 @@ class Piggy(PiggyParent):
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         print("Wait a second. \nI can't navigate the maze at all. Please give my programmer a zero.")
         self.corner_count = 0 #attempt to fix corner issue
-       # start_direction() = self.get_heading() #record beginning direction
+       # start_direction() = self.get_heading() #record beginning direction ... Need to fix
         while True: 
             while self.quick_check(): # When the distance is more tham # ...
                 self.corner_count = 0
@@ -166,7 +166,7 @@ class Piggy(PiggyParent):
     def get_out_of_corner(self): # Method to escape corner
         self.turn_by_deg(180)
         self.deg_fwd(720)
-        #self.turn_by_deg(self.start_direction())
+        #self.turn_by_deg(self.start_direction()) # Store heading ... Need to fix
             #Attempt to try to make robot face direction its stared
             #self.fwd()
             #time.sleep(1)
