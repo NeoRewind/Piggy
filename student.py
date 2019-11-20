@@ -127,7 +127,6 @@ class Piggy(PiggyParent):
         self.corner_count = 0 #attempt to fix corner issue
         start_direction = self.get_heading() #record beginning direction
         while True: 
-            self.servo(self.MIDPOINT) #Set servo straight
             while self.quick_check(): # When the distance is more tham # ...
                 self.corner_count = 0
                 self.fwd()
