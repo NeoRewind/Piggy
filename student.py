@@ -164,6 +164,7 @@ class Piggy(PiggyParent):
 
     def get_out_of_corner(self): # Method to escape corner
         self.turn_by_deg(180)
+        corner_count = 0
             #Attempt to try to make robot face direction its stared
             #self.fwd()
             #time.sleep(1)
