@@ -140,7 +140,7 @@ class Piggy(PiggyParent):
     def average_distance(self): #Check distance
         self.scan()
         self.corner_count += 1
-        if self.corner_count > 3:
+        if self.corner_count > 4:
             self.get_out_of_corner()
             return
         #traversal
