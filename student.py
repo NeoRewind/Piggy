@@ -126,7 +126,7 @@ class Piggy(PiggyParent):
         print("Wait a second. \nI can't navigate the maze at all. Please give my programmer a zero.")
         self.corner_count = 0 #attempt to fix corner issue
 
-        start_direction() = self.get_heading() #record beginning direction ... Need to fix
+        start_direction = self.get_heading() #record beginning direction ... Need to fix
         while True: 
             while self.quick_check(): # When the distance is more tham # ...
                 self.corner_count = 0
