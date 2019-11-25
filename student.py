@@ -135,7 +135,8 @@ class Piggy(PiggyParent):
                 time.sleep(.01) #Move and check distance every .01 seconds
             self.stop()
             # self.check_distance() # turn using check_dist
-            self.average_distance() # turn using average_dist
+            if not exit_path():
+                self.average_distance() # turn using average_dist
     
     def exit_path(self):
         where_I_was = self.get_heading()
