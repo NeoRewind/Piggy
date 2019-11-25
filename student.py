@@ -22,6 +22,7 @@ class Piggy(PiggyParent):
         self.corner_count = 0
         self.load_defaults()
         self.SAFE_Distance = 250
+        self.start_direction = 0
         
         
 
@@ -126,17 +127,24 @@ class Piggy(PiggyParent):
         print("Wait a second. \nI can't navigate the maze at all. Please give my programmer a zero.")
         self.corner_count = 0 #attempt to fix corner issue
 
-        start_direction = self.get_heading() #record beginning direction ... Need to fix
+        self.start_direction = self.get_heading() #record beginning direction ... Need to fix
         while True: 
             while self.quick_check(): # When the distance is more tham # ...
                 self.corner_count = 0
-                self.fwd()
+                self.fwd() #TO DO: Begin to anticipate problems Ahead 
                 time.sleep(.01) #Move and check distance every .01 seconds
             self.stop()
             # self.check_distance() # turn using check_dist
             self.average_distance() # turn using average_dist
+    
+    def exit_path(self):
+        where_I_was = self.get_heading()
+        self.turn_to_deg(self.start_direction)
+        if self.quick_check():
+            return True
+        else:
+            self.turn_to_deg(where_I_was)
             
-
 
     def average_distance(self): #Check distance
         self.scan()
