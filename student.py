@@ -188,7 +188,7 @@ class Piggy(PiggyParent):
         while True:
             time.sleep(.1)
             current_angle = self.get_heading()
-            if current_angle != started_at:
+            if abs(started_at - current_angle) > 20
                 self.turn_to_deg(started_at)
             
 
