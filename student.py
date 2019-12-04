@@ -41,6 +41,7 @@ class Piggy(PiggyParent):
         menu = {"n": ("Navigate", self.nav),
                 "d": ("Dance", self.dance),
                 "o": ("Obstacle count", self.obstacle_count),
+                "h": ("Hold position", self.hold_position)
                 "c": ("Calibrate", self.calibrate),
                 "q": ("Quit", self.quit)
                 }
@@ -181,6 +182,8 @@ class Piggy(PiggyParent):
             #self.fwd()
             #time.sleep(1)
             #self.start_direction()
+
+    def hold_position(self):
 
 
     def check_distance(self): # Additional distance method
