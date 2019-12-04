@@ -184,6 +184,10 @@ class Piggy(PiggyParent):
             #self.start_direction()
 
     def hold_position(self):
+        started_at = self.get_heading()
+        while True:
+            if started_at != self.get_heading() #Maybe change this to be between two values
+
 
 
     def check_distance(self): # Additional distance method
