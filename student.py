@@ -177,12 +177,7 @@ class Piggy(PiggyParent):
     def get_out_of_corner(self): # Method to escape corner
         self.turn_by_deg(180)
         self.deg_fwd(720)
-        #self.turn_to_deg(self.start_direction) # Store heading ... Need to fix
-            #Attempt to try to make robot face direction its stared
-            #self.fwd()
-            #time.sleep(1)
-            #self.start_direction()
-
+      
     def hold_position(self):
         started_at = self.get_heading()
         while True:
