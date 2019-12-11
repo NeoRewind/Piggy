@@ -178,6 +178,9 @@ class Piggy(PiggyParent):
     def get_out_of_corner(self): # Method to escape corner
         self.turn_by_deg(180)
         self.deg_fwd(720)
+
+    def maze_time(self): #This Method will keep track of time spent in maze
+        
       
     def hold_position(self):
         started_at = self.get_heading()
