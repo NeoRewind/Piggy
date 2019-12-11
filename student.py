@@ -180,6 +180,7 @@ class Piggy(PiggyParent):
         self.deg_fwd(720)
 
     def maze_time(self): #This Method will keep track of time spent in maze
+        #when thge robot is picked up, tell time and shut off
         
       
     def hold_position(self):
