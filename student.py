@@ -125,7 +125,7 @@ class Piggy(PiggyParent):
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         print("-------- [ Press CTRL + C to stop me ] --------\n")
         print("-----------! NAVIGATION ACTIVATED !------------\n")
-        print("Wait a second. \nI can't navigate the maze at all. Please give my programmer a zero.")
+        print("I will begin to navigate the maze. I hope I can leave")
         self.corner_count = 0 #attempt to fix corner issue
 
         self.start_direction = self.get_heading() #record beginning direction ... Need to fix
