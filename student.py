@@ -23,6 +23,7 @@ class Piggy(PiggyParent):
         self.load_defaults()
         self.SAFE_Distance = 250
         self.start_direction = 0
+        self.start_time = 0
         
         
 
