@@ -181,7 +181,7 @@ class Piggy(PiggyParent):
 
     def maze_time(self): #This Method will keep track of time spent in maze
         #when thge robot is picked up, tell time and shut off
-        
+        pass
       
     def hold_position(self):
         started_at = self.get_heading()
@@ -191,8 +191,6 @@ class Piggy(PiggyParent):
             if abs(started_at - current_angle) > 20:
                 self.turn_to_deg(started_at)
             
-
-
 
     def check_distance(self): # Additional distance method
         self.servo(1000)
