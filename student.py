@@ -121,6 +121,9 @@ class Piggy(PiggyParent):
                 return False
         #Have servo scan while moving
         return True
+    
+    def slither(self):
+        pass
 
     def nav(self):
         print("-----------! NAVIGATION ACTIVATED !------------\n")
