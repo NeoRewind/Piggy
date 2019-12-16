@@ -123,7 +123,20 @@ class Piggy(PiggyParent):
         return True
     
     def slither(self):
-        pass
+        """practice a smooth veer"""
+        starting_direction = self.get_heading #write down start
+
+        # drive forward
+        self.set_motor_power(self.MOTOR_LEFT, self.LEFT_DEFAULT)
+        self.set_motor_power(self.MOTOR_RIGHT, self.RIGHT_DEFAULT)
+        self.fwd()
+
+        # throttle down left motor 
+
+        #throttle up left while lowering right
+
+        #straighten out
+       
 
     def nav(self):
         print("-----------! NAVIGATION ACTIVATED !------------\n")
