@@ -44,7 +44,8 @@ class Piggy(PiggyParent):
                 "o": ("Obstacle count", self.obstacle_count),
                 "h": ("Hold position", self.hold_position),
                 "c": ("Calibrate", self.calibrate),
-                "q": ("Quit", self.quit)
+                "q": ("Quit", self.quit),
+                "v": ("Veer", self.slither)
                 }
         # loop and print the menu...
         for key in sorted(menu.keys()):
@@ -132,10 +133,39 @@ class Piggy(PiggyParent):
         self.fwd()
 
         # throttle down left motor 
+        for power in range(self.LEFT_DEFAULT, 30, -10):
+            self.set_motor_power(self.MOTOR_LEFT, power)
+            time.sleep(.5)
 
-        #throttle up left while lowering right
+            
+        #throttle up left 
+        for power in range(30, self.LEFT_DEFAULT + 1, 10):
+            self.set_motor_power(self.MOTOR_LEFT, power)
+            time.sleep(.1)
+        
+        #throttle down the right
+        for power in range(self.RIGHT_DEFAULT, 30, -10):
+            self.set_motor_power(self.MOTOR_RIGHT, power)
+            time.sleep(.5)
+
+        # throttle up right
+        for power in range(30, self.RIGHT_DEFAULT + 1, 10:)
+            self.set_motor_power(self.MOTOR_RIGHT, power)
+            time.sleep(.1)
+
+        left_speed = self.LEFT_DEFAULT
+        right_speed = self.RIGHT_DEFAULT
 
         #straighten out
+        while self.get_heading() != starting_direction:
+            if self.get_heading() < starting_direction:
+                right_speed -= 10
+        elif self.get_heading() > starting_direction:
+                left_speed -=10
+        self.set_motor_power(self.MOTOR_LEFT, left_speed)
+        self.set_motor_power(self.MOTOR_RIGHT, right_speed)
+        time.sleep(.1)
+        
        
 
     def nav(self):
