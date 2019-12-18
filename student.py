@@ -16,8 +16,8 @@ class Piggy(PiggyParent):
         ''' 
         MAGIC NUMBERS <-- where we hard-code our settings
         '''
-        self.LEFT_DEFAULT = 78
-        self.RIGHT_DEFAULT = 80
+        self.LEFT_DEFAULT = 88
+        self.RIGHT_DEFAULT = 90
         self.MIDPOINT = 1500  # what servo command (1000-2000) is straight forward for your bot?
         self.corner_count = 0
         self.load_defaults()
@@ -133,23 +133,23 @@ class Piggy(PiggyParent):
         self.fwd()
 
         # throttle down left motor 
-        for power in range(self.LEFT_DEFAULT, 50, -10):
+        for power in range(self.LEFT_DEFAULT, 60, -10):
             self.set_motor_power(self.MOTOR_LEFT, power)
             time.sleep(.5)
 
             
         #throttle up left 
-        for power in range(50, self.LEFT_DEFAULT + 1, 10):
+        for power in range(60, self.LEFT_DEFAULT + 1, 10):
             self.set_motor_power(self.MOTOR_LEFT, power)
             time.sleep(.1)
         
         #throttle down the right
-        for power in range(self.RIGHT_DEFAULT, 50, -10):
+        for power in range(self.RIGHT_DEFAULT, 60, -10):
             self.set_motor_power(self.MOTOR_RIGHT, power)
             time.sleep(.5)
 
         # throttle up right
-        for power in range(50, self.RIGHT_DEFAULT + 1, 10):
+        for power in range(60, self.RIGHT_DEFAULT + 1, 10):
             self.set_motor_power(self.MOTOR_RIGHT, power)
             time.sleep(.1)
 
@@ -159,12 +159,18 @@ class Piggy(PiggyParent):
         #straighten out
         while self.get_heading() != starting_direction:
             if self.get_heading() < starting_direction:
+                print("TOO FAR LEFT")
                 right_speed -= 10
+                left_speed += 5
             elif self.get_heading() > starting_direction:
+                print("TOO FAR RIGHT")
                 left_speed -=10
-        self.set_motor_power(self.MOTOR_LEFT, left_speed)
-        self.set_motor_power(self.MOTOR_RIGHT, right_speed)
-        time.sleep(.1)
+                right_speed += 5
+            self.set_motor_power(self.MOTOR_LEFT, left_speed)
+            self.set_motor_power(self.MOTOR_RIGHT, right_speed)
+            time.sleep(.1)
+        print("okay, I'm all done here")
+        self.stop()
         
        
 
