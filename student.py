@@ -45,7 +45,7 @@ class Piggy(PiggyParent):
                 "h": ("Hold position", self.hold_position),
                 "c": ("Calibrate", self.calibrate),
                 "q": ("Quit", self.quit),
-                "v": ("Veer", self.slither)
+                "v": ("Veer", self.slither),
                 }
         # loop and print the menu...
         for key in sorted(menu.keys()):
@@ -133,23 +133,23 @@ class Piggy(PiggyParent):
         self.fwd()
 
         # throttle down left motor 
-        for power in range(self.LEFT_DEFAULT, 30, -10):
+        for power in range(self.LEFT_DEFAULT, 50, -10):
             self.set_motor_power(self.MOTOR_LEFT, power)
             time.sleep(.5)
 
             
         #throttle up left 
-        for power in range(30, self.LEFT_DEFAULT + 1, 10):
+        for power in range(50, self.LEFT_DEFAULT + 1, 10):
             self.set_motor_power(self.MOTOR_LEFT, power)
             time.sleep(.1)
         
         #throttle down the right
-        for power in range(self.RIGHT_DEFAULT, 30, -10):
+        for power in range(self.RIGHT_DEFAULT, 50, -10):
             self.set_motor_power(self.MOTOR_RIGHT, power)
             time.sleep(.5)
 
         # throttle up right
-        for power in range(30, self.RIGHT_DEFAULT + 1, 10):
+        for power in range(50, self.RIGHT_DEFAULT + 1, 10):
             self.set_motor_power(self.MOTOR_RIGHT, power)
             time.sleep(.1)
 
