@@ -160,11 +160,11 @@ class Piggy(PiggyParent):
         while self.get_heading() != starting_direction:
             if self.get_heading() < starting_direction:
                 print("TOO FAR LEFT")
-                right_speed -= 10
+                right_speed -= 5
                 left_speed += 5
             elif self.get_heading() > starting_direction:
                 print("TOO FAR RIGHT")
-                left_speed -=10
+                left_speed -=5
                 right_speed += 5
             self.set_motor_power(self.MOTOR_LEFT, left_speed)
             self.set_motor_power(self.MOTOR_RIGHT, right_speed)
